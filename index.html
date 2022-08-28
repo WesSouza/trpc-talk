@@ -2,59 +2,175 @@
 
 <head>
   <title>tRPC: Move Fast and Break Nothing</title>
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
-  <section class="slide -title-subtitle" id="slide-" tabindex="0">
-    <header>
-      <h1 class="slide_element -title">tRPC</h1>
-      <h2 class="slide_element -subtitle">Move Fast and Break Nothing</h2>
+  <section class="slide -title-subtitle" id="intro" tabindex="0">
+    <header class="slide_header -hero">
+      <h1 class="-title">tRPC</h1>
+      <h2 class="-subtitle">Move Fast and Break Nothing</h2>
     </header>
 
-    <div class="slide_element -text-center -text-large">
-      Wes Souza, he/him<br />
-      Staff Software Engineer at Unqork<br />
-      <br />
-      <a class="-lower-underline" href="https://wes.dev/">wes.dev</a> &middot;
-      <a class="-lower-underline" href="https://twitter.com/__WesSouza"
-        >twitter.com/__WesSouza</a
-      ><br />
+    <div class="slide_body">
+      <div class="slide_element -text -text-center -text-large">
+        Wes Souza, he/him<br />
+        Staff Software Engineer at Unqork<br />
+        <br />
+        <a class="-lower-underline" href="https://wes.dev/">wes.dev</a> &middot;
+        <a class="-lower-underline" href="https://twitter.com/__WesSouza/"
+          >twitter.com/<span class="-shitty-username">__</span>WesSouza</a
+        ><br />
+      </div>
     </div>
+
+    <svg class="slide_watermark_image -center">
+      <use href="./assets/watermarks.svg#trpc" />
+    </svg>
   </section>
 
-  <section class="slide -title-bullets" id="slide-" tabindex="0">
-    <h1 class="slide_element -title">What is a Web Server?</h1>
+  <section class="slide -title-bullets" id="ingredients" tabindex="0">
+    <h1 class="slide_header -title">Ingredients</h1>
 
-    <ul class="slide_element -bullets"></ul>
+    <ul class="slide_body slide_element -bullets">
+      <li>1 TypeScript front-end codebase</li>
+      <li>1 TypeScript back-end codebase</li>
+      <li>Semicolons to taste</li>
+    </ul>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#list.bullet.clipboard" />
+    </svg>
   </section>
 
-  <section class="slide -title-bullets" id="slide-" tabindex="0">
-    <h1 class="slide_element -title">What is RPC?</h1>
+  <section class="slide -title-text" id="what-is-rpc" tabindex="0">
+    <h1 class="slide_header -title">What is RPC?</h1>
 
-    <ul class="slide_element -bullets"></ul>
+    <div class="slide_body">
+      <div class="slide_element -text">
+        &ldquo;[...] a
+        <em>remote procedure call</em> is when a computer program causes a
+        procedure [...] to execute [...] on another computer [...] without the
+        programmer explicitly coding the details for the remote
+        interaction.&rdquo;<br />
+        <div class="-text-right">
+          &mdash;
+          <a
+            href="https://en.wikipedia.org/wiki/Remote_procedure_call"
+            target="_blank"
+            >Wikipedia</a
+          >, 2011
+        </div>
+      </div>
+    </div>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#network" />
+    </svg>
   </section>
 
-  <section class="slide -title-bullets" id="slide-" tabindex="0">
-    <h1 class="slide_element -title">What is tRPC?</h1>
+  <section class="slide -title-text" id="what-is-trpc" tabindex="0">
+    <h1 class="slide_header -title">What is tRPC?</h1>
 
-    <ul class="slide_element -bullets"></ul>
+    <div class="slide_body">
+      <div class="slide_element -text">
+        &ldquo;<em>tRPC</em> is a TypeScript library that allows programmers to
+        define routes on a web server and call them on a client, while providing
+        type safety on both ends automatically.&rdquo;<br />
+        <div class="-text-right">&mdash; Me, now</div>
+      </div>
+    </div>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#trpc" />
+    </svg>
   </section>
 
-  <section class="slide -title" id="slide-" tabindex="0">
-    <h1 class="slide_element -title">Demo</h1>
+  <section class="slide -title-bullets" id="rest-openapi" tabindex="0">
+    <h1 class="slide_header -title">REST or OpenAPI</h1>
+
+    <ul class="slide_body slide_element -bullets">
+      <li>Front-end and back-end teams and codebases are very separate.</li>
+      <li>Changes happen in isolation.</li>
+      <li>
+        There is code generation for type safety with OpenAPI Generator, but it
+        often sucks.
+      </li>
+      <li>
+        Uses HTTP semantics, although <em>POST</em> means create and
+        <em>PUT</em> means update. I think.
+      </li>
+      <li>No WebSockets.</li>
+    </ul>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#openapi" />
+    </svg>
   </section>
 
-  <section class="slide -title-bullets" id="slide-" tabindex="0">
-    <h1 class="slide_element -title">Things to Consider</h1>
+  <section class="slide -title-bullets" id="graphql" tabindex="0">
+    <h1 class="slide_header -title">GraphQL</h1>
 
-    <ul class="slide_element -bullets"></ul>
+    <ul class="slide_body slide_element -bullets">
+      <li>Front-end and back-end teams and codebases are very separate.</li>
+      <li>Changes must follow the same API contract.</li>
+      <li>
+        There is code generation for type safety with GraphQL Code Generator.
+      </li>
+      <li>Everything uses <em>POST</em> by default.</li>
+      <li>Supports subscriptions.</li>
+    </ul>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#graphql" />
+    </svg>
   </section>
 
-  <section id="slide-" class="slide -title-bullets" tabindex="0">
-    <h1 class="slide_element -title">Thank you!</h1>
+  <section class="slide -title-bullets" id="trpc-details" tabindex="0">
+    <h1 class="slide_header -title">tRPC</h1>
 
-    <ul class="slide_element -bullets -too-many-bullets">
+    <ul class="slide_body slide_element -bullets">
+      <li>Front-end and back-end is in one codebase, written in TypeScript.</li>
+      <li>
+        Changes in the back-end routes affect the front-end code, invalidating
+        type checks and requiring immediate action.
+      </li>
+      <li>Queries use <em>GET</em>, mutations use <em>POST</em>.</li>
+      <li>Supports subscriptions.</li>
+    </ul>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#trpc" />
+    </svg>
+  </section>
+
+  <section class="slide -title" id="trpc-concepts/demo" tabindex="0">
+    <h1 class="slide_body -title">Demo</h1>
+
+    <svg class="slide_watermark_image -center">
+      <use href="./assets/watermarks.svg#ellipsis.curlybraces" />
+    </svg>
+  </section>
+
+  <section class="slide -title-bullets" id="trpc-concepts/caveats" tabindex="0">
+    <h1 class="slide_header -title">Things to Consider</h1>
+
+    <ul class="slide_body slide_element -bullets">
+      <li>Documentation can be improved</li>
+      <li>v9 uses <em>react-query@3</em></li>
+      <li>v10 in active development</li>
+    </ul>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#figure.fall" />
+    </svg>
+  </section>
+
+  <section class="slide -title-bullets" id="trpc-concepts/end" tabindex="0">
+    <h1 class="slide_header -title">Thank you!</h1>
+
+    <ul class="slide_body slide_element -bullets -too-many-bullets">
       <li>
         This presentation<br />
         <a href="https://github.com/WesSouza/trpc-talk/" target="_blank"
@@ -65,6 +181,22 @@
         tRPC Website and Docs<br />
         <a href="https://trpc.io" target="_blank">trpc.io</a>
       </li>
+      <li>
+        Remote procedure call<br />
+        <a
+          href="https://en.wikipedia.org/wiki/Remote_procedure_call"
+          target="_blank"
+          >en.wikipedia.org/wiki/Remote_procedure_call</a
+        >
+      </li>
     </ul>
+
+    <svg class="slide_watermark_image">
+      <use href="./assets/watermarks.svg#hand.thumbsup" />
+    </svg>
   </section>
+
+  &nbsp;
+
+  <script type="module" src="./main.mjs" defer></script>
 </body>
