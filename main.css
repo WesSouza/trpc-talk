@@ -40,6 +40,12 @@
 }
 
 @font-face {
+  font-family: "SF-Mono-Regular";
+  font-weight: 400;
+  src: url("./assets/SF-Mono-Regular.woff2");
+}
+
+@font-face {
   font-family: "SourceSansPro";
   font-weight: 400;
   src: url("./assets/SourceSansPro-Regular.woff2");
@@ -58,6 +64,8 @@ body {
 
 html {
   box-sizing: border-box;
+  font-family: "SourceSansPro", sans-serif;
+  font-weight: 400;
   font-size: 0.0625em;
   color: var(--color-body);
 }
@@ -69,6 +77,10 @@ a {
 
 a.-lower-underline {
   text-underline-offset: 0.3em;
+}
+
+a.-mono {
+  font-family: "SF-Mono-Regular";
 }
 
 em {
@@ -88,26 +100,30 @@ em {
 }
 
 body {
-  font-family: "SourceSansPro", sans-serif;
-  font-weight: 400;
-  background-color: #000;
-  background-image: conic-gradient(
-    from -45deg,
-    hsla(0, 100%, 50%, var(--background-transparency)) 0%,
-    hsla(30deg, 100%, 50%, var(--background-transparency)) 8.333%,
-    hsla(60deg, 100%, 50%, var(--background-transparency)) 16.666%,
-    hsla(90deg, 100%, 50%, var(--background-transparency)) 25%,
-    hsla(120deg, 100%, 50%, var(--background-transparency)) 33.333%,
-    hsla(150deg, 100%, 50%, var(--background-transparency)) 41.666%,
-    hsla(180deg, 100%, 50%, var(--background-transparency)) 50%,
-    hsla(210deg, 100%, 50%, var(--background-transparency)) 58.333%,
-    hsla(240deg, 100%, 50%, var(--background-transparency)) 66.666%,
-    hsla(270deg, 100%, 50%, var(--background-transparency)) 75%,
-    hsla(300deg, 100%, 50%, var(--background-transparency)) 83.333%,
-    hsla(330deg, 100%, 50%, var(--background-transparency)) 91.666%,
-    hsla(0, 100%, 50%, var(--background-transparency)) 100%
-  );
-  background-attachment: fixed;
+  background-color: var(--color-accent);
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: #000;
+    background-image: conic-gradient(
+      from -45deg,
+      hsla(0, 100%, 50%, var(--background-transparency)) 0%,
+      hsla(30deg, 100%, 50%, var(--background-transparency)) 8.333%,
+      hsla(60deg, 100%, 50%, var(--background-transparency)) 16.666%,
+      hsla(90deg, 100%, 50%, var(--background-transparency)) 25%,
+      hsla(120deg, 100%, 50%, var(--background-transparency)) 33.333%,
+      hsla(150deg, 100%, 50%, var(--background-transparency)) 41.666%,
+      hsla(180deg, 100%, 50%, var(--background-transparency)) 50%,
+      hsla(210deg, 100%, 50%, var(--background-transparency)) 58.333%,
+      hsla(240deg, 100%, 50%, var(--background-transparency)) 66.666%,
+      hsla(270deg, 100%, 50%, var(--background-transparency)) 75%,
+      hsla(300deg, 100%, 50%, var(--background-transparency)) 83.333%,
+      hsla(330deg, 100%, 50%, var(--background-transparency)) 91.666%,
+      hsla(0, 100%, 50%, var(--background-transparency)) 100%
+    );
+    background-attachment: fixed;
+  }
 }
 
 h1,
@@ -143,6 +159,16 @@ h2 {
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   background-color: rgb(255, 255, 255, 0.95);
+}
+
+.slide.-dark {
+  width: var(--slide-width);
+  height: var(--slide-height);
+  margin: 0;
+  scroll-margin-top: 0;
+  background-color: #000;
+  border-radius: 0;
+  --color-accent: #fff;
 }
 
 .slide:focus {
@@ -202,7 +228,7 @@ h2 {
 .slide_watermark_image {
   position: absolute;
   color: var(--color-accent);
-  opacity: 0.1;
+  opacity: 0.05;
   z-index: 0;
   aspect-ratio: 1 / 1;
   height: 100%;
@@ -213,6 +239,17 @@ h2 {
 .slide_watermark_image.-center {
   left: auto;
   top: 0;
+}
+
+.slide_watermark_image.-right {
+  left: unset;
+  right: -5%;
+}
+
+@media screen and (max-width: 999px) {
+  .slide_watermark_image {
+    opacity: 0;
+  }
 }
 
 .-text-center {

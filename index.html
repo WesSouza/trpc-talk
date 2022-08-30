@@ -3,6 +3,10 @@
 <head>
   <title>tRPC: Move Fast and Break Nothing</title>
   <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
   <link rel="stylesheet" href="./main.css" />
 </head>
 
@@ -94,13 +98,10 @@
       <li>Front-end and back-end teams and codebases are very separate.</li>
       <li>Changes happen in isolation.</li>
       <li>
-        There is code generation for type safety with OpenAPI Generator, but it
-        often sucks.
+        There is code generation for type safety with OpenAPI Generator, not
+        ideal.
       </li>
-      <li>
-        Uses HTTP semantics, although <em>POST</em> means create and
-        <em>PUT</em> means update. I think.
-      </li>
+      <li>Uses HTTP semantics.</li>
       <li>No WebSockets.</li>
     </ul>
 
@@ -145,7 +146,7 @@
     </svg>
   </section>
 
-  <section class="slide -title" id="trpc-concepts/demo" tabindex="0">
+  <section class="slide -title -dark" id="demo" tabindex="0">
     <h1 class="slide_body -title">Demo</h1>
 
     <svg class="slide_watermark_image -center">
@@ -153,7 +154,7 @@
     </svg>
   </section>
 
-  <section class="slide -title-bullets" id="trpc-concepts/caveats" tabindex="0">
+  <section class="slide -title-bullets" id="caveats" tabindex="0">
     <h1 class="slide_header -title">Things to Consider</h1>
 
     <ul class="slide_body slide_element -bullets">
@@ -162,31 +163,65 @@
       <li>v10 in active development</li>
     </ul>
 
-    <svg class="slide_watermark_image">
+    <svg class="slide_watermark_image -right">
       <use href="./assets/watermarks.svg#figure.fall" />
     </svg>
   </section>
 
-  <section class="slide -title-bullets" id="trpc-concepts/end" tabindex="0">
-    <h1 class="slide_header -title">Thank you!</h1>
+  <section class="slide -title-bullets" id="further-reading" tabindex="0">
+    <h1 class="slide_header -title">References</h1>
 
     <ul class="slide_body slide_element -bullets -too-many-bullets">
       <li>
+        tRPC Website and Docs<br />
+        <a href="https://trpc.io" class="-mono -lower-underline" target="_blank"
+          >trpc.io</a
+        >
+      </li>
+      <li>
         This presentation<br />
-        <a href="https://github.com/WesSouza/trpc-talk/" target="_blank"
+        <a
+          href="https://github.com/WesSouza/trpc-talk/"
+          class="-mono -lower-underline"
+          target="_blank"
           >github.com/WesSouza/trpc-talk</a
         >
       </li>
       <li>
-        tRPC Website and Docs<br />
-        <a href="https://trpc.io" target="_blank">trpc.io</a>
+        tRPC Rainbow Example<br />
+        <a
+          href="https://github.com/WesSouza/trpc-rainbow/"
+          class="-mono -lower-underline"
+          target="_blank"
+          >github.com/WesSouza/trpc-rainbow</a
+        >
       </li>
       <li>
         Remote procedure call<br />
         <a
           href="https://en.wikipedia.org/wiki/Remote_procedure_call"
+          class="-mono -lower-underline"
           target="_blank"
           >en.wikipedia.org/wiki/Remote_procedure_call</a
+        >
+      </li>
+      <li>
+        I Deleted HALF My Backend Code With This One Package?? &ndash; Theo
+        Browne<br />
+        <a
+          href="https://www.youtube.com/watch?v=PYUqYcPMPeQ"
+          class="-mono -lower-underline"
+          target="_blank"
+          >youtube.com/watch?v=PYUqYcPMPeQ</a
+        >
+      </li>
+      <li>
+        tRPC: Smart and Easy APIs &ndash; Jack Herrington<br />
+        <a
+          href="https://www.youtube.com/watch?v=Lam0cYOEst8"
+          class="-mono -lower-underline"
+          target="_blank"
+          >youtube.com/watch?v=Lam0cYOEst8</a
         >
       </li>
     </ul>
